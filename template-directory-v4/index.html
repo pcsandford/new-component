@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Template Directory</title>
+
+   <!-- Font -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto:100,300,900' rel='stylesheet' type='text/css'>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="build/css/style.css">
+
+  <!-- Bower Dependencies -->
+  <script src="bower_components/webcomponentsjs/webcomponents-lite.min.js"></script>
+  <link rel="import" href="bower_components/rise-google-sheet/rise-google-sheet.html">
+
+</head>
+<body>
+
+<div id="users">
+  <ul class="directory__head">
+  <p class="column1">
+  </p>
+   <input class="search" placeholder="Search" />
+  <div id="virtualKeyboard"></div>
+    <p class="column1">
+  </p>
+<p class="column2">
+  <button class="sort" data-sort="name">
+    Name
+  </button>
+  </p>
+  <p class="column3">
+  <button class="sort" data-sort="title">
+    Title
+  </button>
+    </p>
+    <p class="column4">
+  <button class="sort" data-sort="phone">
+    Phone
+  </button>
+     </p>
+      <p class="column5">
+    <button class="sort" data-sort="email">
+    Email
+  </button>
+    </p>
+  </ul>
+
+  <!-- Sheets Component -->
+  <rise-google-sheet
+      id="googleSheet"
+      key="1T5C6LhZ3wCXxKc9ki8nAJsvB__mJlSqHk7FF88Sqcak"
+      apikey="AIzaSyAdX5yRzScPWbRm0FnNcoYxbiLeQo8owwc"
+      sheet="Sheet1"
+      refresh="60"></rise-google-sheet>
+
+
+<div id="directory">
+
+  <!--spreadsheet data-->
+  <ul class="list page directory__list">
+  </ul>
+
+</div>
+</div>
+
+
+  <!-- Details Card View-->
+  <div class="wrapper">
+    <div class="overlay">
+      <div class="card">
+
+        <h3 class="detail__column2"></h3>
+        <img class="detail__column1" src="" alt="">
+        <p class="detail__column3"></p>
+        <p class="detail__column4"></p>
+        <p class="detail__column5"></p>
+        <p class="detail__column6"></p>
+        <div class="button__close">
+          <div class="line1"></div>
+          <div class="line2"></div>
+        </div>
+      </div> <!--.card-->
+    </div><!--.overlay-->
+  </div><!--.wrapper-->
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+<!-- Main JS -->
+<!-- <script src="build/scripts/all.min.js"></script> -->
+<script src="src/scripts/detail-card.js"></script>
+<script src="src/scripts/jsKeyboard.js"></script>
+<script src="src/scripts/directory.js"></script>
+<script src="src/scripts/main.js"></script>
+
+</body>
+</html>
